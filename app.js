@@ -20,5 +20,17 @@ function isValidCard(code) {
   var mult = evens.map(function(num) {
     return num * 2;
   });
-  console.log(mult);
+  var multSum = mult.join('').split('');
+
+  var sum = 0;
+  for (var m = 0; m < multSum.length; m++) {
+    sum += (parseInt(multSum[m]));
+  };
+  if (sum % 10 === 0) {
+    return alert('Your credit card number is valid');
+  } else {
+    return alert('Your credit card number is not valid');
+
+}
+
 }
